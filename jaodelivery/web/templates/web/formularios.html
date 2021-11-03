@@ -1,0 +1,45 @@
+{% extends "web/base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block conteudo %}
+  <div class="col-sm-12 col-md-8 col-lg-8 mt-5">
+    <h1 class="text-center">{{ titulo }}</h1>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ formulario|crispy }}
+
+      <div class="d-flex justify-content-center mt-5">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="fab">
+    <button class="main"></button>
+    <ul>
+      <li>
+        <label for="opcao1">Add</label>
+        <button id="opcao1"><i class="fas fa-plus"></i></button>
+      </li>
+      <li>
+        <label for="opcao2">listar</label>
+        <button id="opcao2"><i class="fas fa-table"></i></button>
+      </li>
+    </ul>
+  </div>
+{% endblock conteudo %}
+
+{% block scriptbtn %}
+
+  {% comment %} function gotolink(banco){
+    
+  } {% endcomment %}
+
+  document.getElementById('opcao1').addEventListener('click', ()=> {
+    window.location.href = '/web/{{ banco_dados }}/cadastrar/'
+  })
+  document.getElementById('opcao2').addEventListener('click', ()=> {
+    window.location.href = '/web/{{ banco_dados }}/';
+  })
+{% endblock %}

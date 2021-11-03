@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+nav{
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card {
+  margin: 20vh auto;
+  text-align: center;
+}
+
+.card-body h1, .card-body h6, .card-body .form-group {
+  margin: 10px 0;
+}

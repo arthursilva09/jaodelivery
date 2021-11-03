@@ -1,0 +1,202 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* NAVBAR */
+nav{
+  box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.5);
+}
+.dropdown .nav-link{
+  color: #000 !important;
+}
+
+/* TABELA */
+table a {
+  text-decoration: none;
+}
+
+.fa-edit {
+  color: green;
+}
+
+.fa-trash {
+  color: brown;
+}
+
+/* BANNER */
+.carousel-item {
+  height: 80vh;
+}
+
+#carousel-1 {
+  background-image: url('../img/background_jaodelivery.jpeg');
+  background-size: cover;
+}
+#carousel-2 {
+  background-image: url('../img/background_jaodelivery2.jpeg');
+  background-size: cover;
+}
+
+#carousel-1 .banner-content{
+  margin: 10rem;
+  height: 40vh;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#carousel-2 .banner-content{
+  margin: 10rem;
+  height: 40vh;
+  background-color: #000;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.banner-content h1, .banner-content h5 {
+  margin: 15px 0;
+  padding: 15px;
+}
+/* END CAROUSEL */
+
+/* BOTAO FLUTUANTE */
+.fab{
+  position: fixed;
+  bottom:10px;
+  right:10px;
+}
+
+.fab button{
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 30px;
+  background-color: #cb60b3;
+  border: none;
+  box-shadow: 0 1px 5px rgba(0,0,0,.4);
+  font-size: 24px;
+  color: white;
+    
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab button:focus{
+  outline: none;
+}
+
+.fab button.main{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #5b19b7;
+  right: 5px;
+  bottom: 5px;
+  z-index: 20;
+}
+
+.fab button.main:before{
+  content: '+';
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.fab ul{
+  position:absolute;
+  bottom: 0;
+  right: 0;
+  padding:0;
+  padding-right:5px;
+  margin:0;
+  list-style:none;
+  z-index:10;
+  
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab ul li{
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: -10%;
+  margin-right: 8px;
+  opacity: 0;
+  
+  -webkit-transition: .3s ease-out;
+  -moz-transition: .3s ease-out;
+  transition: .3s ease-out;
+}
+
+.fab ul li label{
+  margin-right:10px;
+  white-space: nowrap;
+  display: block;
+  margin-top: 10px;
+  padding: 5px 8px;
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,.2);
+  border-radius:3px;
+  height: 18px;
+  min-width: 50px;
+  font-size: 16px;
+  pointer-events: none;
+  opacity:0;
+
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.fab.show button.main,
+.fab.show button.main{
+  outline: none;
+  background-color: #7716ff;
+  box-shadow: 0 3px 8px rgba(0,0,0,.5);
+ }
+ 
+.fab.show button.main:before,
+.fab.show button.main:before{
+  content: '↑';
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.fab.show button.main + ul,
+.fab.show button.main + ul{
+  bottom: 70px;
+}
+
+.fab.show button.main + ul li,
+.fab.show button.main + ul li{
+  margin-bottom: 10px;
+  opacity: 1;
+}
+
+.fab.show button.main + ul li:hover label,
+.fab.show button.main + ul li:hover label{
+  opacity: 1;
+}
+/* END BOTAO FLUTUANTE  */
+
+/* CONTA */
+.card-conta {
+  margin: 5vh auto;
+}
+
+.card-conta h1 {
+  text-align: center;
+}
+
+.card-conta input {
+  margin: 10px 0;
+}
+.card-conta .btn-primary{
+  margin: 1rem 0;
+}

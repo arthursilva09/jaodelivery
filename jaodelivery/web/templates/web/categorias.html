@@ -1,0 +1,56 @@
+{% extends "web/base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block conteudo %}
+  <div class="container col-sm-12 col-md-6 col-lg-6 mt-5">
+    <h1 class="text-center">Categorias</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>id</th>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for categ in categorias %}
+          <tr>
+            <td> {{ categ.id }} </td>
+            <td> {{ categ.nome }} </td>
+            <td> 
+              <a href="/jaodelivery2/categorias/editar/{{ categ.id }}">
+                <i class="fas fa-edit"></i>
+              </a>
+              <a href="/jaodelivery2/categorias/remover/{{ categ.id }}">
+                <i class="fas fa-trash"></i>
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="fab"> 
+    <button class="main"></button>
+    <ul>
+      <li>
+        <label for="opcao1">Add</label>
+        <button id="opcao1"><i class="fas fa-plus"></i></button>
+      </li>
+      <li>
+        <label for="opcao2">listar</label>
+        <button id="opcao2"><i class="fas fa-table"></i></button>
+      </li>
+    </ul>
+  </div>
+{% endblock conteudo %}
+
+{% block scriptbtn %}
+  document.getElementById('opcao1').addEventListener('click', ()=> {
+    window.location.href = '/web/categorias/cadastrar/'
+  })
+  document.getElementById('opcao2').addEventListener('click', ()=> {
+    window.location.href = '/web/categorias/'
+  })
+{% endblock %}
